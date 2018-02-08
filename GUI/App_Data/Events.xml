@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Events>
+  <Event>
+    <Title>Tesla Launch</Title>
+    <Location>San Francisco</Location>
+    <Time>11/18/2017 11:23 PM</Time>
+    <Description>Launch of mini truck</Description>
+    <Attendees>
+      <Count>2</Count>
+      <Name>michael@email.com</Name>
+      <Name>jajati@email.com</Name>
+    </Attendees>
+  </Event>
+  <Event>
+    <Title>Bikers meet</Title>
+    <Location>Tempe, AZ</Location>
+    <Time>11/19/2017 11:23 AM</Time>
+    <Description>Local bikers meet</Description>
+    <Attendees>
+      <Count>2</Count>
+      <Name>jajati@email.com</Name>
+      <Name>michael@email.com</Name>
+    </Attendees>
+  </Event>
+  <Event>
+    <Title>Laughing club meet</Title>
+    <Location>Seattle, WA</Location>
+    <Time>11/20/2017 11:00 AM</Time>
+    <Description>Meet for local laughing club.</Description>
+    <Attendees>
+      <Count>3</Count>
+      <Name>michael@email.com</Name>
+      <Name>jajati@email.com</Name>
+      <Name>richard@email.com</Name>
+    </Attendees>
+  </Event>
+  <Event>
+    <Title>Driving club meet</Title>
+    <Location>Austin, TX</Location>
+    <Time>11/17/2017 10:00 AM</Time>
+    <Description>Local meet for driving club.</Description>
+    <Attendees>
+      <Count>0</Count>
+    </Attendees>
+  </Event>
+  <Event>
+    <Title>Pokemon Go meet</Title>
+    <Location>San Francisco</Location>
+    <Time>11/18/2017 11:23 PM</Time>
+    <Description>Pokemon Go local enthusiasts meet.</Description>
+    <Attendees>
+      <Count>0</Count>
+    </Attendees>
+  </Event>
+</Events>

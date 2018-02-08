@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://webstrar11.fulton.asu.edu/Page8/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://webstrar11.fulton.asu.edu/Page8/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://webstrar11.fulton.asu.edu/Page8/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_WeatherForcast_InputMessage">
+    <wsdl:part name="parameters" element="tns:WeatherForcast" />
+  </wsdl:message>
+  <wsdl:message name="IService1_WeatherForcast_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WeatherForcastResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetIndex_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndex" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetIndex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndexResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkfunction_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkfunction" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkfunction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkfunctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_password_InputMessage">
+    <wsdl:part name="parameters" element="tns:password" />
+  </wsdl:message>
+  <wsdl:message name="IService1_password_OutputMessage">
+    <wsdl:part name="parameters" element="tns:passwordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_confirmpassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:confirmpassword" />
+  </wsdl:message>
+  <wsdl:message name="IService1_confirmpassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:confirmpasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_validate_InputMessage">
+    <wsdl:part name="parameters" element="tns:validate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_validate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:validateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_signin_InputMessage">
+    <wsdl:part name="parameters" element="tns:signin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_signin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:signinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_uniqueemailid_InputMessage">
+    <wsdl:part name="parameters" element="tns:uniqueemailid" />
+  </wsdl:message>
+  <wsdl:message name="IService1_uniqueemailid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:uniqueemailidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_regex_InputMessage">
+    <wsdl:part name="parameters" element="tns:regex" />
+  </wsdl:message>
+  <wsdl:message name="IService1_regex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:regexResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="WeatherForcast">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/WeatherForcast" message="tns:IService1_WeatherForcast_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/WeatherForcastResponse" message="tns:IService1_WeatherForcast_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndex">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetIndex" message="tns:IService1_GetIndex_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetIndexResponse" message="tns:IService1_GetIndex_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkfunction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/checkfunction" message="tns:IService1_checkfunction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/checkfunctionResponse" message="tns:IService1_checkfunction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="password">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/password" message="tns:IService1_password_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/passwordResponse" message="tns:IService1_password_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="confirmpassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/confirmpassword" message="tns:IService1_confirmpassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/confirmpasswordResponse" message="tns:IService1_confirmpassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="validate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/validate" message="tns:IService1_validate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/validateResponse" message="tns:IService1_validate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="signin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/signin" message="tns:IService1_signin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/signinResponse" message="tns:IService1_signin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="uniqueemailid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/uniqueemailid" message="tns:IService1_uniqueemailid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/uniqueemailidResponse" message="tns:IService1_uniqueemailid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="regex">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/regex" message="tns:IService1_regex_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/regexResponse" message="tns:IService1_regex_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WeatherForcast">
+      <soap:operation soapAction="http://tempuri.org/IService1/WeatherForcast" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndex">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetIndex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkfunction">
+      <soap:operation soapAction="http://tempuri.org/IService1/checkfunction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="password">
+      <soap:operation soapAction="http://tempuri.org/IService1/password" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmpassword">
+      <soap:operation soapAction="http://tempuri.org/IService1/confirmpassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validate">
+      <soap:operation soapAction="http://tempuri.org/IService1/validate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="signin">
+      <soap:operation soapAction="http://tempuri.org/IService1/signin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uniqueemailid">
+      <soap:operation soapAction="http://tempuri.org/IService1/uniqueemailid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="regex">
+      <soap:operation soapAction="http://tempuri.org/IService1/regex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://webstrar11.fulton.asu.edu/Page8/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

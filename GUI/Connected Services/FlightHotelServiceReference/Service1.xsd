@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/FlightHotel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/FlightHotel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Flight" nillable="true" type="tns:Flight" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlight" nillable="true" type="tns:ArrayOfFlight" />
+  <xs:complexType name="Flight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FlightDetails" nillable="true" type="tns:ArrayOfLegDetails" />
+      <xs:element minOccurs="0" name="TotalPrice" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Flight" nillable="true" type="tns:Flight" />
+  <xs:complexType name="ArrayOfLegDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LegDetails" nillable="true" type="tns:LegDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLegDetails" nillable="true" type="tns:ArrayOfLegDetails" />
+  <xs:complexType name="LegDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dst" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DstTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Src" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SrcTime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LegDetails" nillable="true" type="tns:LegDetails" />
+  <xs:complexType name="ArrayOfHotel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hotel" nillable="true" type="tns:Hotel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHotel" nillable="true" type="tns:ArrayOfHotel" />
+  <xs:complexType name="Hotel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rating" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Hotel" nillable="true" type="tns:Hotel" />
+</xs:schema>
